@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Guia de revisão do primeiro ano de Engenharia de Software"><title>Linguagem C | Revisão de Software</title><link rel="stylesheet" href="estilo.css"><script src="revisao.js" defer></script></head>
+<body><header class="top"><div class="shell"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span> Revisão de Software</a><nav aria-label="Principal"><a href="index.html#materias">Matérias</a><a href="https://www.eniac.edu.br/cursos/engenharia-software">Grade ENIAC</a></nav></div></header>
+<main class="shell layout"><aside class="side"><nav aria-label="Matérias"><p class="eyebrow">1º período</p><a href="comunicacao.html">Comunicação</a><a href="carreira.html">Desenvolvimento Profissional</a><a href="matematica.html">Matemática</a><p class="eyebrow">2º período</p><a href="sql.html">Banco de Dados com SQL</a><a href="c.html" aria-current="page">Linguagem C</a><a href="python.html">Linguagem Python</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="javascript.html">JavaScript</a><a href="canvas.html">Negócios em TI — Canvas</a></nav></aside><article class="lesson">
+<div class="lesson-head"><p class="eyebrow">2º período</p><h1>Linguagem C</h1><p>Tipos, controle de fluxo, funções, vetores e memória.</p></div>
+<nav class="lesson-index" aria-label="Nesta matéria"><a href="#conceitos">Conceitos</a><a href="#exemplo">Exemplo comentado</a><a href="#exercicios">Exercícios</a></nav>
+<section id="conceitos"><h2>Conceitos essenciais</h2><div class="topic"><h3>Compilação e tipos</h3><p>O compilador traduz o código e produz um executável após a ligação. Use int para inteiros, double para valores de ponto flutuante e char para caracteres. Em C, 5 / 2 vale 2, enquanto 5.0 / 2 vale 2.5.</p></div><div class="topic"><h3>Controle de fluxo</h3><p>if e else escolhem um caminho. for é útil para percorrer posições de um vetor. while repete enquanto a condição for verdadeira. Confundir = com == muda uma comparação em atribuição.</p></div><div class="topic"><h3>Vetores e strings</h3><p>Um vetor com n posições aceita índices de 0 a n − 1. Uma string em C é uma sequência de char terminada por '\0'. Reserve espaço para o terminador ao dimensionar o vetor.</p></div><div class="topic"><h3>Funções e ponteiros</h3><p>Argumentos são passados por valor. Para alterar uma variável do chamador, passe seu endereço com &amp; e acesse o objeto pelo ponteiro com *. Ao receber um vetor em função, passe também seu tamanho.</p></div><div class="topic"><h3>Estruturas e memória</h3><p>struct reúne campos relacionados. malloc reserva memória dinâmica e pode retornar NULL. Libere com free quando terminar e evite acessar memória fora dos limites ou depois de liberá-la.</p></div></section>
+<section id="exemplo"><h2>Média de um vetor</h2><div class="snippet"><div class="code-head"><span>C</span><button class="copy" type="button">Copiar exemplo</button></div><pre tabindex="0" aria-label="Média de um vetor"><code><span class="comment">#include &lt;stdio.h&gt;</span>
+<span class="comment">#include &lt;stddef.h&gt;</span>
+
+<span class="keyword">double</span> media(<span class="keyword">const</span> <span class="keyword">int</span> notas[], size_t quantidade) {
+    <span class="keyword">double</span> soma = <span class="number">0.0</span>;
+    for (size_t i = <span class="number">0</span>; i &lt; quantidade; i++) {
+        soma += notas[i];
+    }
+    <span class="keyword">return</span> soma / quantidade;
+}
+
+<span class="keyword">int</span> main(<span class="keyword">void</span>) {
+    <span class="keyword">int</span> notas[] = {<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>};
+    <span class="comment">// sizeof funciona aqui, onde notas ainda é um vetor.</span>
+    size_t quantidade = sizeof notas / sizeof notas[<span class="number">0</span>];
+    printf(<span class="string">&quot;Media: %.1f\n&quot;</span>, media(notas, quantidade));
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre></div><p id="copy-status" class="status" aria-live="polite"></p><p>Saída: Media: 8.0. Compile com gcc -std=c17 -Wall -Wextra media.c -o media. A função pressupõe quantidade maior que zero e recebe o tamanho real calculado em main.</p></section>
+<section id="exercicios" class="practice"><h2>Exercícios de revisão</h2><p>Tente resolver antes de abrir a resposta.</p><details><summary>Quais são os índices válidos de int valores[5]?</summary><p><strong>Resposta.</strong> De 0 a 4. Acessar valores[5] ultrapassa o vetor.</p></details><details><summary>Por que usar double para soma?</summary><p><strong>Resposta.</strong> Dividir uma soma double por um inteiro gera divisão em ponto flutuante, preservando a parte fracionária.</p></details></section>
+<div class="lesson-bottom"><button id="review" type="button" class="button primary" data-id="c" aria-pressed="false">Marcar como revisada</button><a class="button" href="python.html">Próxima · Linguagem Python</a></div><p id="review-status" class="status" aria-live="polite"></p>
+</article></main>
+<footer><div class="shell">Guia de estudo independente · Engenharia de Software<br><a href="https://www.eniac.edu.br/cursos/engenharia-software">Matriz curricular pública da ENIAC</a></div></footer></body></html>

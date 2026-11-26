@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Guia de revisão do primeiro ano de Engenharia de Software"><title>HTML | Revisão de Software</title><link rel="stylesheet" href="estilo.css"><script src="revisao.js" defer></script></head>
+<body><header class="top"><div class="shell"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span> Revisão de Software</a><nav aria-label="Principal"><a href="index.html#materias">Matérias</a><a href="https://www.eniac.edu.br/cursos/engenharia-software">Grade ENIAC</a></nav></div></header>
+<main class="shell layout"><aside class="side"><nav aria-label="Matérias"><p class="eyebrow">1º período</p><a href="comunicacao.html">Comunicação</a><a href="carreira.html">Desenvolvimento Profissional</a><a href="matematica.html">Matemática</a><p class="eyebrow">2º período</p><a href="sql.html">Banco de Dados com SQL</a><a href="c.html">Linguagem C</a><a href="python.html">Linguagem Python</a><a href="html.html" aria-current="page">HTML</a><a href="css.html">CSS</a><a href="javascript.html">JavaScript</a><a href="canvas.html">Negócios em TI — Canvas</a></nav></aside><article class="lesson">
+<div class="lesson-head"><p class="eyebrow">2º período / Tecnologia Web</p><h1>HTML</h1><p>Estrutura semântica, formulários e acessibilidade.</p></div>
+<nav class="lesson-index" aria-label="Nesta matéria"><a href="#conceitos">Conceitos</a><a href="#exemplo">Exemplo comentado</a><a href="#exercicios">Exercícios</a></nav>
+<section id="conceitos"><h2>Conceitos essenciais</h2><div class="topic"><h3>Documento e semântica</h3><p>DOCTYPE ativa o modo padrão do navegador. O head contém metadados e referências. O body contém o conteúdo. Use main para o conteúdo principal, nav para navegação e uma hierarquia de títulos que reflita a organização.</p></div><div class="topic"><h3>Links e mídia</h3><p>Use a com href para navegar e button para ações. Imagens informativas precisam de texto alternativo que cumpra o mesmo propósito. Use alt vazio em imagens puramente decorativas.</p></div><div class="topic"><h3>Formulários</h3><p>Associe label e input via for e id. O atributo name identifica o campo no envio. type='email' e required ajudam na validação do navegador. Um servidor deve validar os dados novamente ao recebê-los.</p></div><div class="topic"><h3>Listas e tabelas</h3><p>Use ul para itens sem ordem e ol para sequências. Use tabelas para dados tabulares, com caption para contextualizar e th com scope para cabeçalhos.</p></div></section>
+<section id="exemplo"><h2>Formulário semântico</h2><div class="snippet"><div class="code-head"><span>HTML</span><button class="copy" type="button">Copiar exemplo</button></div><pre tabindex="0" aria-label="Formulário semântico"><code>&lt;!doctype html&gt;
+&lt;html lang=<span class="string">&quot;pt-BR&quot;</span>&gt;
+&lt;head&gt;
+  &lt;meta charset=<span class="string">&quot;utf-8&quot;</span>&gt;
+  &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;
+  &lt;title&gt;Lista de estudo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;main&gt;
+    &lt;h1&gt;Cadastro de estudo&lt;/h1&gt;
+    <span class="comment">&lt;!-- O label dá nome acessível ao campo. --&gt;</span>
+    &lt;form method=<span class="string">&quot;get&quot;</span>&gt;
+      &lt;label for=<span class="string">&quot;email&quot;</span>&gt;Seu e-mail&lt;/label&gt;
+      &lt;input id=<span class="string">&quot;email&quot;</span> name=<span class="string">&quot;email&quot;</span> type=<span class="string">&quot;email&quot;</span> required&gt;
+      &lt;button type=<span class="string">&quot;submit&quot;</span>&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div><p id="copy-status" class="status" aria-live="polite"></p><p>Salve como index.html e abra no navegador. O exemplo demonstra o envio para a própria página via GET. Use um e-mail fictício, pois o valor aparece na URL.</p></section>
+<section id="exercicios" class="practice"><h2>Exercícios de revisão</h2><p>Tente resolver antes de abrir a resposta.</p><details><summary>O que ocorre se o input tiver id, mas nenhum name?</summary><p><strong>Resposta.</strong> O label ainda pode funcionar, mas o valor do campo não entra nos dados enviados pelo formulário.</p></details><details><summary>Qual elemento usaria para abrir outra página?</summary><p><strong>Resposta.</strong> Um link com &lt;a href=&quot;...&quot;&gt;.</p></details></section>
+<div class="lesson-bottom"><button id="review" type="button" class="button primary" data-id="html" aria-pressed="false">Marcar como revisada</button><a class="button" href="css.html">Próxima · CSS</a></div><p id="review-status" class="status" aria-live="polite"></p>
+</article></main>
+<footer><div class="shell">Guia de estudo independente · Engenharia de Software<br><a href="https://www.eniac.edu.br/cursos/engenharia-software">Matriz curricular pública da ENIAC</a></div></footer></body></html>
