@@ -1,12 +1,82 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Guia de revisão do primeiro ano de Engenharia de Software"><title>Banco de Dados com SQL | Revisão de Software</title><link rel="stylesheet" href="estilo.css"><script src="revisao.js" defer></script></head>
-<body><header class="top"><div class="shell"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span> Revisão de Software</a><nav aria-label="Principal"><a href="index.html#materias">Matérias</a><a href="https://www.eniac.edu.br/cursos/engenharia-software">Grade ENIAC</a></nav></div></header>
-<main class="shell layout"><aside class="side"><nav aria-label="Matérias"><p class="eyebrow">1º período</p><a href="comunicacao.html">Comunicação</a><a href="carreira.html">Desenvolvimento Profissional</a><a href="matematica.html">Matemática</a><p class="eyebrow">2º período</p><a href="sql.html" aria-current="page">Banco de Dados com SQL</a><a href="c.html">Linguagem C</a><a href="python.html">Linguagem Python</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="javascript.html">JavaScript</a><a href="canvas.html">Negócios em TI — Canvas</a></nav></aside><article class="lesson">
-<div class="lesson-head"><p class="eyebrow">2º período</p><h1>Banco de Dados com SQL</h1><p>Modelagem relacional, consultas, junções e transações.</p></div>
-<nav class="lesson-index" aria-label="Nesta matéria"><a href="#conceitos">Conceitos</a><a href="#exemplo">Exemplo comentado</a><a href="#exercicios">Exercícios</a></nav>
-<section id="conceitos"><h2>Conceitos essenciais</h2><div class="topic"><h3>Tabelas e relacionamentos</h3><p>A chave primária identifica cada linha. Uma chave estrangeira aponta para uma chave de outra tabela. Modele uma relação N:N com uma tabela de associação que contenha as duas chaves.</p></div><div class="topic"><h3>Normalização</h3><p>Na 1FN, mantenha valores atômicos e evite grupos repetidos. Na 2FN, cada atributo que não é chave deve depender da chave candidata inteira. Na 3FN, evite dependências transitivas entre atributos não chave.</p></div><div class="topic"><h3>DDL e CRUD</h3><p>CREATE TABLE define estrutura e restrições. INSERT cria linhas, SELECT consulta, UPDATE altera e DELETE remove. Use WHERE em alterações específicas e verifique o filtro com SELECT antes da mudança.</p></div><div class="topic"><h3>Junções e agregações</h3><p>INNER JOIN retorna pares correspondentes. LEFT JOIN mantém as linhas da esquerda mesmo sem correspondência. WHERE filtra linhas antes de agrupar. HAVING filtra grupos após GROUP BY. COUNT(coluna) ignora NULL.</p></div><div class="topic"><h3>NULL, índices e transações</h3><p>Teste ausência de valor com IS NULL. Índices podem acelerar buscas ao custo de espaço e manutenção na escrita. Em uma transação, COMMIT confirma o conjunto de mudanças e ROLLBACK o desfaz enquanto estiver aberto.</p></div></section>
-<section id="exemplo"><h2>Pedidos por cliente</h2><div class="snippet"><div class="code-head"><span>SQL</span><button class="copy" type="button">Copiar exemplo</button></div><pre tabindex="0" aria-label="Pedidos por cliente"><code><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> clientes (
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guia de revisão do primeiro ano de Engenharia de Software">
+    <title>Banco de Dados com SQL | Revisão de Software</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="revisao.js" defer></script>
+  </head>
+  <body>
+    <header class="top">
+      <div class="shell">
+        <a class="brand" href="index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span> Revisão de Software</a>
+        <nav aria-label="Principal">
+          <a href="index.html#materias">Matérias</a>
+          <a href="https://www.eniac.edu.br/cursos/engenharia-software">Grade ENIAC</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell layout">
+      <aside class="side">
+        <nav aria-label="Matérias">
+          <p class="eyebrow">1º período</p>
+          <a href="comunicacao.html">Comunicação</a>
+          <a href="carreira.html">Desenvolvimento Profissional</a>
+          <a href="matematica.html">Matemática</a>
+          <p class="eyebrow">2º período</p>
+          <a href="sql.html" aria-current="page">Banco de Dados com SQL</a>
+          <a href="c.html">Linguagem C</a>
+          <a href="python.html">Linguagem Python</a>
+          <a href="html.html">HTML</a>
+          <a href="css.html">CSS</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="canvas.html">Negócios em TI — Canvas</a>
+        </nav>
+      </aside>
+      <article class="lesson">
+        <div class="lesson-head">
+          <p class="eyebrow">2º período</p>
+          <h1>Banco de Dados com SQL</h1>
+          <p>Modelagem relacional, consultas, junções e transações.</p>
+        </div>
+        <nav class="lesson-index" aria-label="Nesta matéria">
+          <a href="#conceitos">Conceitos</a>
+          <a href="#exemplo">Exemplo comentado</a>
+          <a href="#exercicios">Exercícios</a>
+        </nav>
+        <section id="conceitos">
+          <h2>Conceitos essenciais</h2>
+          <div class="topic">
+            <h3>Tabelas e relacionamentos</h3>
+            <p>A chave primária identifica cada linha. Uma chave estrangeira aponta para uma chave de outra tabela. Modele uma relação N:N com uma tabela de associação que contenha as duas chaves.</p>
+          </div>
+          <div class="topic">
+            <h3>Normalização</h3>
+            <p>Na 1FN, mantenha valores atômicos e evite grupos repetidos. Na 2FN, cada atributo que não é chave deve depender da chave candidata inteira. Na 3FN, evite dependências transitivas entre atributos não chave.</p>
+          </div>
+          <div class="topic">
+            <h3>DDL e CRUD</h3>
+            <p>CREATE TABLE define estrutura e restrições. INSERT cria linhas, SELECT consulta, UPDATE altera e DELETE remove. Use WHERE em alterações específicas e verifique o filtro com SELECT antes da mudança.</p>
+          </div>
+          <div class="topic">
+            <h3>Junções e agregações</h3>
+            <p>INNER JOIN retorna pares correspondentes. LEFT JOIN mantém as linhas da esquerda mesmo sem correspondência. WHERE filtra linhas antes de agrupar. HAVING filtra grupos após GROUP BY. COUNT(coluna) ignora NULL.</p>
+          </div>
+          <div class="topic">
+            <h3>NULL, índices e transações</h3>
+            <p>Teste ausência de valor com IS NULL. Índices podem acelerar buscas ao custo de espaço e manutenção na escrita. Em uma transação, COMMIT confirma o conjunto de mudanças e ROLLBACK o desfaz enquanto estiver aberto.</p>
+          </div>
+        </section>
+        <section id="exemplo">
+          <h2>Pedidos por cliente</h2>
+          <div class="snippet">
+            <div class="code-head">
+              <span>SQL</span>
+              <button class="copy" type="button">Copiar exemplo</button>
+            </div>
+            <pre tabindex="0" aria-label="Pedidos por cliente"><code><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> clientes (
   id INTEGER <span class="keyword">PRIMARY</span> <span class="keyword">KEY</span>,
   nome VARCHAR(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>
 );
@@ -23,8 +93,34 @@
 <span class="keyword">FROM</span> clientes <span class="keyword">AS</span> c
 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> pedidos <span class="keyword">AS</span> p <span class="keyword">ON</span> p.cliente_id = c.id
 <span class="keyword">GROUP</span> <span class="keyword">BY</span> c.id, c.nome
-<span class="keyword">ORDER</span> <span class="keyword">BY</span> total DESC, c.nome;</code></pre></div><p id="copy-status" class="status" aria-live="polite"></p><p>Resultado: Ana 2, Bia 0. Com COUNT(*), a linha sem correspondência também seria contada. A consulta usa sintaxe compatível com SQLite e PostgreSQL.</p></section>
-<section id="exercicios" class="practice"><h2>Exercícios de revisão</h2><p>Tente resolver antes de abrir a resposta.</p><details><summary>Como retornar apenas clientes com dois ou mais pedidos?</summary><p><strong>Resposta.</strong> Acrescente HAVING COUNT(p.id) &gt;= 2 após GROUP BY e antes de ORDER BY.</p></details><details><summary>Onde guardar o endereço do cliente para evitar repetição em cada pedido?</summary><p><strong>Resposta.</strong> Na tabela clientes, quando for o endereço cadastral atual. Um endereço de entrega histórico pode ser gravado no pedido para preservar o destino original.</p></details></section>
-<div class="lesson-bottom"><button id="review" type="button" class="button primary" data-id="sql" aria-pressed="false">Marcar como revisada</button><a class="button" href="c.html">Próxima · Linguagem C</a></div><p id="review-status" class="status" aria-live="polite"></p>
-</article></main>
-<footer><div class="shell">Guia de estudo independente · Engenharia de Software<br><a href="https://www.eniac.edu.br/cursos/engenharia-software">Matriz curricular pública da ENIAC</a></div></footer></body></html>
+<span class="keyword">ORDER</span> <span class="keyword">BY</span> total DESC, c.nome;</code></pre>
+          </div>
+          <p id="copy-status" class="status" aria-live="polite"></p>
+          <p>Resultado: Ana 2, Bia 0. Com COUNT(*), a linha sem correspondência também seria contada. A consulta usa sintaxe compatível com SQLite e PostgreSQL.</p>
+        </section>
+        <section id="exercicios" class="practice">
+          <h2>Exercícios de revisão</h2>
+          <p>Tente resolver antes de abrir a resposta.</p>
+          <details>
+            <summary>Como retornar apenas clientes com dois ou mais pedidos?</summary>
+            <p><strong>Resposta.</strong> Acrescente HAVING COUNT(p.id) &gt;= 2 após GROUP BY e antes de ORDER BY.</p>
+          </details>
+          <details>
+            <summary>Onde guardar o endereço do cliente para evitar repetição em cada pedido?</summary>
+            <p><strong>Resposta.</strong> Na tabela clientes, quando for o endereço cadastral atual. Um endereço de entrega histórico pode ser gravado no pedido para preservar o destino original.</p>
+          </details>
+        </section>
+        <div class="lesson-bottom">
+          <button id="review" type="button" class="button primary" data-id="sql" aria-pressed="false">Marcar como revisada</button>
+          <a class="button" href="c.html">Próxima · Linguagem C</a>
+        </div>
+        <p id="review-status" class="status" aria-live="polite"></p>
+      </article>
+    </main>
+    <footer>
+      <div class="shell">
+        Guia de estudo independente · Engenharia de Software<br><a href="https://www.eniac.edu.br/cursos/engenharia-software">Matriz curricular pública da ENIAC</a>
+      </div>
+    </footer>
+  </body>
+</html>

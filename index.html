@@ -1,18 +1,349 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Guia de revisão do primeiro ano de Engenharia de Software"><title>Revisão de Software | 1º ano</title><link rel="stylesheet" href="estilo.css"><script src="revisao.js" defer></script></head>
-<body><header class="top"><div class="shell"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span> Revisão de Software</a><nav aria-label="Principal"><a href="index.html#materias">Matérias</a><a href="https://www.eniac.edu.br/cursos/engenharia-software">Grade ENIAC</a></nav></div></header>
-<main class="shell">
-<section class="hero" aria-labelledby="titulo"><div><p class="eyebrow">Engenharia de Software / ENIAC</p><h1 id="titulo">Revisão do<br><span>primeiro ano.</span></h1><p>Revise os fundamentos, explore exemplos comentados e teste o que aprendeu com exercícios de cada matéria.</p><div class="actions"><a class="button primary" href="#materias">Explorar matérias</a><a class="button" href="comunicacao.html">Começar revisão</a></div></div>
-<div class="editor" aria-label="Exemplo em Python"><div class="editor-top"><i></i><i></i><i></i><span>revisao.py</span></div><pre tabindex="0"><code><em># Quantas matérias você já revisou?</em>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guia de revisão do primeiro ano de Engenharia de Software">
+    <title>Revisão de Software | 1º ano</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="revisao.js" defer></script>
+  </head>
+  <body>
+    <header class="top">
+      <div class="shell">
+        <a class="brand" href="index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span> Revisão de Software</a>
+        <nav aria-label="Principal">
+          <a href="index.html#materias">Matérias</a>
+          <a href="https://www.eniac.edu.br/cursos/engenharia-software">Grade ENIAC</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell">
+      <section class="hero" aria-labelledby="titulo">
+        <div>
+          <p class="eyebrow">Engenharia de Software / ENIAC</p>
+          <h1 id="titulo">Revisão do<br><span>primeiro ano.</span></h1>
+          <p>Revise os fundamentos, explore exemplos comentados e teste o que aprendeu com exercícios de cada matéria.</p>
+          <div class="actions">
+            <a class="button primary" href="#materias">Explorar matérias</a>
+            <a class="button" href="comunicacao.html">Começar revisão</a>
+          </div>
+        </div>
+        <div class="editor" aria-label="Exemplo em Python">
+          <div class="editor-top">
+            <i></i><i></i><i></i><span>revisao.py</span>
+          </div>
+          <pre tabindex="0"><code><em># Quantas matérias você já revisou?</em>
 total = <b class="number">10</b>
 revisadas = <b class="number">3</b>
 progresso = revisadas / total
 
 <b class="keyword">print</b>(<b class="string">f"Progresso: {progresso:.0%}"</b>)
-<em># Progresso: 30%</em></code></pre></div></section>
-<section id="materias" class="overview" aria-labelledby="materias-title"><div class="section-head"><div><h2 id="materias-title">Matérias</h2><p>Escolha um assunto ou siga a ordem dos períodos.</p></div><div class="progress"><span id="progress-text">0 de 10 matérias revisadas</span><progress aria-labelledby="progress-text" value="0" max="10"></progress></div></div>
-<div class="toolbar"><div class="filters" aria-label="Filtrar por período"><button class="filter" data-filter="all" aria-pressed="true">Todas</button><button class="filter" data-filter="1" aria-pressed="false">1º período</button><button class="filter" data-filter="2" aria-pressed="false">2º período</button></div><input id="search" type="search" aria-label="Buscar matéria ou assunto" placeholder="Buscar matéria ou assunto"></div><p id="empty" hidden role="status">Nenhuma matéria encontrada.</p>
-<section class="period" data-period="1"><h3>1º período</h3><div class="grid"><a class="tile" href="comunicacao.html" data-id="comunicacao" data-search="Comunicação Escrita acadêmica, interpretação e comunicação técnica. Contexto e intenção Emissor, receptor, mensagem, canal, código e contexto compõem a situação comunicativa. Ruído é tudo que atrapalha a interpretação. Em uma equipe, siglas desconhecidas e instruções ambíguas são exemplos de ruído. Leitura e argumentação Separe tema, tese e evidências. O tema diz sobre o que se fala. A tese expressa a posição defendida. Dados e exemplos servem como evidências quando têm relação clara com a tese. Coesão e coerência Coesão liga frases com pronomes, conectivos e retomadas. Coerência exige que as ideias façam sentido juntas. Use «portanto» para conclusão e «porém» para oposição. Escrita acadêmica e técnica Um resumo preserva a ideia central com suas palavras. Credite ideias e trechos de outras pessoas. Em relatórios técnicos, informe contexto, observação, impacto e próximo passo. Adapte a linguagem ao público. Apresentação e feedback Apresente problema, solução e evidência em sequência. No feedback, descreva o comportamento observado e proponha uma ação concreta. Confirme o entendimento pedindo que a outra pessoa resuma o combinado."><span class="tile-icon" aria-hidden="true">CO</span><strong>Comunicação</strong><small>Escrita acadêmica, interpretação e comunicação técnica.</small><span class="done" hidden>✓ Revisada</span></a><a class="tile" href="carreira.html" data-id="carreira" data-search="Desenvolvimento Profissional Portfólio, colaboração e qualidade no trabalho de software. Papéis e ciclo do software Produto prioriza problemas, design investiga a experiência, engenharia implementa e opera, e qualidade ajuda a prevenir e detectar falhas. Requisitos, desenvolvimento, testes, entrega e manutenção se repetem conforme o produto evolui. Git e colaboração Um commit registra um conjunto de mudanças. Uma branch isola uma linha de trabalho. Um pull request reúne contexto, alterações e evidências para revisão. Prefira commits com um propósito claro. Qualidade e testes Teste unitário verifica uma unidade isolada. Teste de integração verifica componentes trabalhando juntos. Teste ponta a ponta percorre o fluxo do usuário. Cubra entradas válidas, inválidas e valores de fronteira. Portfólio e entrevistas Mostre problema, decisões, instruções de execução e testes no README. Para entrevistas, use situação, tarefa, ação e resultado. Explique sua contribuição e apresente evidências mensuráveis quando disponíveis. Ética e rotina Use dados fictícios em projetos públicos e mantenha credenciais fora do repositório. Divida tarefas em entregas pequenas, comunique bloqueios cedo e registre decisões que afetem a equipe."><span class="tile-icon" aria-hidden="true">DP</span><strong>Desenvolvimento Profissional</strong><small>Portfólio, colaboração e qualidade no trabalho de software.</small><span class="done" hidden>✓ Revisada</span></a><a class="tile" href="matematica.html" data-id="matematica" data-search="Matemática Álgebra, funções, lógica, conjuntos e probabilidade. Aritmética e porcentagem Respeite parênteses, potências, multiplicação e divisão, depois adição e subtração. Para aumentar um valor em p%, multiplique por 1 + p/100. Descontos sucessivos multiplicam seus fatores. Equações e sistemas Uma igualdade continua válida quando se aplica a mesma operação aos dois lados, respeitando o domínio. Para resolver um sistema, substitua uma incógnita por sua expressão ou elimine-a somando equações equivalentes. Funções e gráficos Uma função atribui uma saída a cada entrada do domínio. Na função afim f(x) = ax + b, a é a taxa de variação e b é o valor em x = 0. Em uma quadrática, o gráfico é uma parábola e as raízes são as interseções com o eixo x. Conjuntos e lógica A união reúne elementos dos dois conjuntos. A interseção mantém os elementos comuns. P ∧ Q exige ambas as proposições verdadeiras. P ∨ Q exige pelo menos uma. Pela lei de De Morgan, ¬(P ∧ Q) equivale a ¬P ∨ ¬Q. Estatística e probabilidade A média soma os valores e divide pela quantidade. A mediana fica no centro da lista ordenada e é a média dos dois centrais quando a quantidade é par. Em resultados equiprováveis, a probabilidade é casos favoráveis ÷ casos possíveis."><span class="tile-icon" aria-hidden="true">∑</span><strong>Matemática</strong><small>Álgebra, funções, lógica, conjuntos e probabilidade.</small><span class="done" hidden>✓ Revisada</span></a></div></section><section class="period" data-period="2"><h3>2º período</h3><div class="grid"><a class="tile" href="sql.html" data-id="sql" data-search="Banco de Dados com SQL Modelagem relacional, consultas, junções e transações. Tabelas e relacionamentos A chave primária identifica cada linha. Uma chave estrangeira aponta para uma chave de outra tabela. Modele uma relação N:N com uma tabela de associação que contenha as duas chaves. Normalização Na 1FN, mantenha valores atômicos e evite grupos repetidos. Na 2FN, cada atributo que não é chave deve depender da chave candidata inteira. Na 3FN, evite dependências transitivas entre atributos não chave. DDL e CRUD CREATE TABLE define estrutura e restrições. INSERT cria linhas, SELECT consulta, UPDATE altera e DELETE remove. Use WHERE em alterações específicas e verifique o filtro com SELECT antes da mudança. Junções e agregações INNER JOIN retorna pares correspondentes. LEFT JOIN mantém as linhas da esquerda mesmo sem correspondência. WHERE filtra linhas antes de agrupar. HAVING filtra grupos após GROUP BY. COUNT(coluna) ignora NULL. NULL, índices e transações Teste ausência de valor com IS NULL. Índices podem acelerar buscas ao custo de espaço e manutenção na escrita. Em uma transação, COMMIT confirma o conjunto de mudanças e ROLLBACK o desfaz enquanto estiver aberto."><span class="tile-icon" aria-hidden="true">DB</span><strong>Banco de Dados com SQL</strong><small>Modelagem relacional, consultas, junções e transações.</small><span class="done" hidden>✓ Revisada</span></a><a class="tile" href="c.html" data-id="c" data-search="Linguagem C Tipos, controle de fluxo, funções, vetores e memória. Compilação e tipos O compilador traduz o código e produz um executável após a ligação. Use int para inteiros, double para valores de ponto flutuante e char para caracteres. Em C, 5 / 2 vale 2, enquanto 5.0 / 2 vale 2.5. Controle de fluxo if e else escolhem um caminho. for é útil para percorrer posições de um vetor. while repete enquanto a condição for verdadeira. Confundir = com == muda uma comparação em atribuição. Vetores e strings Um vetor com n posições aceita índices de 0 a n − 1. Uma string em C é uma sequência de char terminada por '\0'. Reserve espaço para o terminador ao dimensionar o vetor. Funções e ponteiros Argumentos são passados por valor. Para alterar uma variável do chamador, passe seu endereço com &amp; e acesse o objeto pelo ponteiro com *. Ao receber um vetor em função, passe também seu tamanho. Estruturas e memória struct reúne campos relacionados. malloc reserva memória dinâmica e pode retornar NULL. Libere com free quando terminar e evite acessar memória fora dos limites ou depois de liberá-la."><span class="tile-icon" aria-hidden="true">C</span><strong>Linguagem C</strong><small>Tipos, controle de fluxo, funções, vetores e memória.</small><span class="done" hidden>✓ Revisada</span></a><a class="tile" href="python.html" data-id="python" data-search="Linguagem Python Estruturas de dados, funções, arquivos e exceções. Tipos e conversões int, float, str e bool representam valores diferentes. input devolve texto, então converta quando precisar calcular. / faz divisão real e // arredonda o quociente para baixo. Controle de fluxo A indentação delimita blocos. Use if, elif e else para decisões. for percorre um iterável. range(3) gera 0, 1 e 2. while repete enquanto a condição se mantém verdadeira. Coleções Listas são ordenadas e mutáveis. Tuplas são ordenadas e imutáveis em sua estrutura. Dicionários associam chaves a valores. Conjuntos armazenam elementos distintos e ajudam em testes de pertinência. Funções, módulos e classes def declara uma função e return entrega um valor ao chamador. import reutiliza módulos. Uma classe reúne comportamento e estado, e self referencia a instância que recebe a chamada. Arquivos e exceções Use with open(..., encoding='utf-8') para fechar arquivos automaticamente ao sair do bloco. Capture exceções específicas, como ValueError ao converter texto inválido."><span class="tile-icon" aria-hidden="true">Py</span><strong>Linguagem Python</strong><small>Estruturas de dados, funções, arquivos e exceções.</small><span class="done" hidden>✓ Revisada</span></a><a class="tile" href="html.html" data-id="html" data-search="HTML Estrutura semântica, formulários e acessibilidade. Documento e semântica DOCTYPE ativa o modo padrão do navegador. O head contém metadados e referências. O body contém o conteúdo. Use main para o conteúdo principal, nav para navegação e uma hierarquia de títulos que reflita a organização. Links e mídia Use a com href para navegar e button para ações. Imagens informativas precisam de texto alternativo que cumpra o mesmo propósito. Use alt vazio em imagens puramente decorativas. Formulários Associe label e input via for e id. O atributo name identifica o campo no envio. type='email' e required ajudam na validação do navegador. Um servidor deve validar os dados novamente ao recebê-los. Listas e tabelas Use ul para itens sem ordem e ol para sequências. Use tabelas para dados tabulares, com caption para contextualizar e th com scope para cabeçalhos."><span class="tile-icon" aria-hidden="true">&lt;&gt;</span><strong>HTML</strong><small>Estrutura semântica, formulários e acessibilidade.</small><span class="done" hidden>✓ Revisada</span></a><a class="tile" href="css.html" data-id="css" data-search="CSS Cascata, dimensionamento, layout e responsividade. Seletores e cascata Classes selecionam elementos reutilizáveis. Entre regras normais do mesmo autor e da mesma camada, a maior especificidade vence. Se a especificidade for igual, vence a declaração posterior. Modelo de caixa Cada elemento tem conteúdo, padding, borda e margem. Com box-sizing: border-box, o width inclui padding e borda. Margens ficam fora da caixa. Flexbox e Grid Flexbox organiza itens em um eixo principal e outro transversal. Grid define linhas e colunas ao mesmo tempo. Use gap para espaçar itens nos dois layouts. Responsividade e estados Use unidades flexíveis, limites de largura e media queries quando o conteúdo precisar de uma mudança de layout. :focus-visible marca o foco para navegação por teclado. Garanta contraste e legibilidade."><span class="tile-icon" aria-hidden="true">{ }</span><strong>CSS</strong><small>Cascata, dimensionamento, layout e responsividade.</small><span class="done" hidden>✓ Revisada</span></a><a class="tile" href="javascript.html" data-id="javascript" data-search="JavaScript Lógica, DOM, eventos e operações assíncronas. Tipos e operadores Use const para vínculos sem reatribuição e let quando houver reatribuição. const ainda permite alterar propriedades de um objeto. === compara sem coerção de tipos. Number converte texto numérico e Number.isFinite valida o resultado. Funções e coleções Arrays guardam listas ordenadas e objetos guardam propriedades. map transforma elementos, filter seleciona elementos e reduce acumula um resultado. Uma função pode receber ou retornar outras funções. DOM e eventos querySelector encontra o primeiro elemento correspondente. addEventListener associa uma função a um evento. textContent atualiza texto sem interpretá-lo como HTML. Em formulários, preventDefault cancela o envio padrão quando você vai tratar o evento. Assincronismo e JSON Uma Promise representa o resultado futuro de uma operação. await espera a resolução dentro de uma função async. Com fetch, verifique response.ok antes de ler JSON e trate falhas de rede com try/catch."><span class="tile-icon" aria-hidden="true">JS</span><strong>JavaScript</strong><small>Lógica, DOM, eventos e operações assíncronas.</small><span class="done" hidden>✓ Revisada</span></a><a class="tile" href="canvas.html" data-id="canvas" data-search="Negócios em TI — Canvas Os nove blocos do Business Model Canvas e validação de hipóteses. Clientes e valor Segmentos de clientes definem para quem você cria valor. Proposta de valor descreve o problema resolvido e o benefício. Em software, diferencie quem usa, quem decide e quem paga. Canais e relacionamento Canais mostram como as pessoas descobrem, compram e usam a solução. Relacionamento indica como são atendidas e retidas, por exemplo, por autosserviço ou suporte humano. Receitas e custos Fontes de receita descrevem quem paga, quanto e de que forma. Estrutura de custos reúne gastos fixos e variáveis. Compare receita, margem e volume necessário para sustentar o negócio. Recursos, atividades e parceiros Recursos são os ativos necessários, como equipe e infraestrutura. Atividades são ações essenciais, como desenvolver e operar. Parcerias são organizações externas que ajudam a entregar o valor. Validação e MVP Trate cada bloco como hipótese. Converse com o segmento escolhido, teste uma versão mínima e defina antes o que será medido. Atualize o Canvas com evidências do teste."><span class="tile-icon" aria-hidden="true">CN</span><strong>Negócios em TI — Canvas</strong><small>Os nove blocos do Business Model Canvas e validação de hipóteses.</small><span class="done" hidden>✓ Revisada</span></a></div></section>
-</section></main>
-<footer><div class="shell">Guia de estudo independente · Engenharia de Software<br><a href="https://www.eniac.edu.br/cursos/engenharia-software">Matriz curricular pública da ENIAC</a></div></footer></body></html>
+<em># Progresso: 30%</em></code></pre>
+        </div>
+      </section>
+      <section id="materias" class="overview" aria-labelledby="materias-title">
+        <div class="section-head">
+          <div>
+            <h2 id="materias-title">Matérias</h2>
+            <p>Escolha um assunto ou siga a ordem dos períodos.</p>
+          </div>
+          <div class="progress">
+            <span id="progress-text">0 de 10 matérias revisadas</span><progress aria-labelledby="progress-text" value="0" max="10"></progress>
+          </div>
+        </div>
+        <div class="toolbar">
+          <div class="filters" aria-label="Filtrar por período">
+            <button class="filter" data-filter="all" aria-pressed="true">Todas</button>
+            <button class="filter" data-filter="1" aria-pressed="false">1º período</button>
+            <button class="filter" data-filter="2" aria-pressed="false">2º período</button>
+          </div>
+          <input id="search" type="search" aria-label="Buscar matéria ou assunto" placeholder="Buscar matéria ou assunto">
+        </div>
+        <p id="empty" hidden role="status">Nenhuma matéria encontrada.</p>
+        <section class="period" data-period="1">
+          <h3>1º período</h3>
+          <div class="grid">
+            <a
+              class="tile"
+              href="comunicacao.html"
+              data-id="comunicacao"
+              data-search="
+                Comunicação Escrita acadêmica, interpretação e comunicação técnica. Contexto e
+                intenção Emissor, receptor, mensagem, canal, código e contexto compõem a
+                situação comunicativa. Ruído é tudo que atrapalha a interpretação. Em uma
+                equipe, siglas desconhecidas e instruções ambíguas são exemplos de ruído.
+                Leitura e argumentação Separe tema, tese e evidências. O tema diz sobre o que
+                se fala. A tese expressa a posição defendida. Dados e exemplos servem como
+                evidências quando têm relação clara com a tese. Coesão e coerência Coesão liga
+                frases com pronomes, conectivos e retomadas. Coerência exige que as ideias
+                façam sentido juntas. Use «portanto» para conclusão e «porém» para oposição.
+                Escrita acadêmica e técnica Um resumo preserva a ideia central com suas
+                palavras. Credite ideias e trechos de outras pessoas. Em relatórios técnicos,
+                informe contexto, observação, impacto e próximo passo. Adapte a linguagem ao
+                público. Apresentação e feedback Apresente problema, solução e evidência em
+                sequência. No feedback, descreva o comportamento observado e proponha uma ação
+                concreta. Confirme o entendimento pedindo que a outra pessoa resuma o
+                combinado.
+              "
+            >
+              <span class="tile-icon" aria-hidden="true">CO</span>
+              <strong>Comunicação</strong>
+              <small>Escrita acadêmica, interpretação e comunicação técnica.</small>
+              <span class="done" hidden>✓ Revisada</span>
+            </a>
+            <a
+              class="tile"
+              href="carreira.html"
+              data-id="carreira"
+              data-search="
+                Desenvolvimento Profissional Portfólio, colaboração e qualidade no trabalho de
+                software. Papéis e ciclo do software Produto prioriza problemas, design
+                investiga a experiência, engenharia implementa e opera, e qualidade ajuda a
+                prevenir e detectar falhas. Requisitos, desenvolvimento, testes, entrega e
+                manutenção se repetem conforme o produto evolui. Git e colaboração Um commit
+                registra um conjunto de mudanças. Uma branch isola uma linha de trabalho. Um
+                pull request reúne contexto, alterações e evidências para revisão. Prefira
+                commits com um propósito claro. Qualidade e testes Teste unitário verifica uma
+                unidade isolada. Teste de integração verifica componentes trabalhando juntos.
+                Teste ponta a ponta percorre o fluxo do usuário. Cubra entradas válidas,
+                inválidas e valores de fronteira. Portfólio e entrevistas Mostre problema,
+                decisões, instruções de execução e testes no README. Para entrevistas, use
+                situação, tarefa, ação e resultado. Explique sua contribuição e apresente
+                evidências mensuráveis quando disponíveis. Ética e rotina Use dados fictícios
+                em projetos públicos e mantenha credenciais fora do repositório. Divida
+                tarefas em entregas pequenas, comunique bloqueios cedo e registre decisões que
+                afetem a equipe.
+              "
+            >
+              <span class="tile-icon" aria-hidden="true">DP</span>
+              <strong>Desenvolvimento Profissional</strong>
+              <small>Portfólio, colaboração e qualidade no trabalho de software.</small>
+              <span class="done" hidden>✓ Revisada</span>
+            </a>
+            <a
+              class="tile"
+              href="matematica.html"
+              data-id="matematica"
+              data-search="
+                Matemática Álgebra, funções, lógica, conjuntos e probabilidade. Aritmética e
+                porcentagem Respeite parênteses, potências, multiplicação e divisão, depois
+                adição e subtração. Para aumentar um valor em p%, multiplique por 1 + p/100.
+                Descontos sucessivos multiplicam seus fatores. Equações e sistemas Uma
+                igualdade continua válida quando se aplica a mesma operação aos dois lados,
+                respeitando o domínio. Para resolver um sistema, substitua uma incógnita por
+                sua expressão ou elimine-a somando equações equivalentes. Funções e gráficos
+                Uma função atribui uma saída a cada entrada do domínio. Na função afim f(x) =
+                ax + b, a é a taxa de variação e b é o valor em x = 0. Em uma quadrática, o
+                gráfico é uma parábola e as raízes são as interseções com o eixo x. Conjuntos
+                e lógica A união reúne elementos dos dois conjuntos. A interseção mantém os
+                elementos comuns. P ∧ Q exige ambas as proposições verdadeiras. P ∨ Q exige
+                pelo menos uma. Pela lei de De Morgan, ¬(P ∧ Q) equivale a ¬P ∨ ¬Q.
+                Estatística e probabilidade A média soma os valores e divide pela quantidade.
+                A mediana fica no centro da lista ordenada e é a média dos dois centrais
+                quando a quantidade é par. Em resultados equiprováveis, a probabilidade é
+                casos favoráveis ÷ casos possíveis.
+              "
+            >
+              <span class="tile-icon" aria-hidden="true">∑</span>
+              <strong>Matemática</strong>
+              <small>Álgebra, funções, lógica, conjuntos e probabilidade.</small>
+              <span class="done" hidden>✓ Revisada</span>
+            </a>
+          </div>
+        </section>
+        <section class="period" data-period="2">
+          <h3>2º período</h3>
+          <div class="grid">
+            <a
+              class="tile"
+              href="sql.html"
+              data-id="sql"
+              data-search="
+                Banco de Dados com SQL Modelagem relacional, consultas, junções e transações.
+                Tabelas e relacionamentos A chave primária identifica cada linha. Uma chave
+                estrangeira aponta para uma chave de outra tabela. Modele uma relação N:N com
+                uma tabela de associação que contenha as duas chaves. Normalização Na 1FN,
+                mantenha valores atômicos e evite grupos repetidos. Na 2FN, cada atributo que
+                não é chave deve depender da chave candidata inteira. Na 3FN, evite
+                dependências transitivas entre atributos não chave. DDL e CRUD CREATE TABLE
+                define estrutura e restrições. INSERT cria linhas, SELECT consulta, UPDATE
+                altera e DELETE remove. Use WHERE em alterações específicas e verifique o
+                filtro com SELECT antes da mudança. Junções e agregações INNER JOIN retorna
+                pares correspondentes. LEFT JOIN mantém as linhas da esquerda mesmo sem
+                correspondência. WHERE filtra linhas antes de agrupar. HAVING filtra grupos
+                após GROUP BY. COUNT(coluna) ignora NULL. NULL, índices e transações Teste
+                ausência de valor com IS NULL. Índices podem acelerar buscas ao custo de
+                espaço e manutenção na escrita. Em uma transação, COMMIT confirma o conjunto
+                de mudanças e ROLLBACK o desfaz enquanto estiver aberto.
+              "
+            >
+              <span class="tile-icon" aria-hidden="true">DB</span>
+              <strong>Banco de Dados com SQL</strong>
+              <small>Modelagem relacional, consultas, junções e transações.</small>
+              <span class="done" hidden>✓ Revisada</span>
+            </a>
+            <a
+              class="tile"
+              href="c.html"
+              data-id="c"
+              data-search="
+                Linguagem C Tipos, controle de fluxo, funções, vetores e memória. Compilação e
+                tipos O compilador traduz o código e produz um executável após a ligação. Use
+                int para inteiros, double para valores de ponto flutuante e char para
+                caracteres. Em C, 5 / 2 vale 2, enquanto 5.0 / 2 vale 2.5. Controle de fluxo
+                if e else escolhem um caminho. for é útil para percorrer posições de um vetor.
+                while repete enquanto a condição for verdadeira. Confundir = com == muda uma
+                comparação em atribuição. Vetores e strings Um vetor com n posições aceita
+                índices de 0 a n − 1. Uma string em C é uma sequência de char terminada por
+                '\0'. Reserve espaço para o terminador ao dimensionar o vetor. Funções e
+                ponteiros Argumentos são passados por valor. Para alterar uma variável do
+                chamador, passe seu endereço com &amp; e acesse o objeto pelo ponteiro com *.
+                Ao receber um vetor em função, passe também seu tamanho. Estruturas e memória
+                struct reúne campos relacionados. malloc reserva memória dinâmica e pode
+                retornar NULL. Libere com free quando terminar e evite acessar memória fora
+                dos limites ou depois de liberá-la.
+              "
+            >
+              <span class="tile-icon" aria-hidden="true">C</span>
+              <strong>Linguagem C</strong>
+              <small>Tipos, controle de fluxo, funções, vetores e memória.</small>
+              <span class="done" hidden>✓ Revisada</span>
+            </a>
+            <a
+              class="tile"
+              href="python.html"
+              data-id="python"
+              data-search="
+                Linguagem Python Estruturas de dados, funções, arquivos e exceções. Tipos e
+                conversões int, float, str e bool representam valores diferentes. input
+                devolve texto, então converta quando precisar calcular. / faz divisão real e
+                // arredonda o quociente para baixo. Controle de fluxo A indentação delimita
+                blocos. Use if, elif e else para decisões. for percorre um iterável. range(3)
+                gera 0, 1 e 2. while repete enquanto a condição se mantém verdadeira. Coleções
+                Listas são ordenadas e mutáveis. Tuplas são ordenadas e imutáveis em sua
+                estrutura. Dicionários associam chaves a valores. Conjuntos armazenam
+                elementos distintos e ajudam em testes de pertinência. Funções, módulos e
+                classes def declara uma função e return entrega um valor ao chamador. import
+                reutiliza módulos. Uma classe reúne comportamento e estado, e self referencia
+                a instância que recebe a chamada. Arquivos e exceções Use with open(...,
+                encoding='utf-8') para fechar arquivos automaticamente ao sair do bloco.
+                Capture exceções específicas, como ValueError ao converter texto inválido.
+              "
+            >
+              <span class="tile-icon" aria-hidden="true">Py</span>
+              <strong>Linguagem Python</strong>
+              <small>Estruturas de dados, funções, arquivos e exceções.</small>
+              <span class="done" hidden>✓ Revisada</span>
+            </a>
+            <a
+              class="tile"
+              href="html.html"
+              data-id="html"
+              data-search="
+                HTML Estrutura semântica, formulários e acessibilidade. Documento e semântica
+                DOCTYPE ativa o modo padrão do navegador. O head contém metadados e
+                referências. O body contém o conteúdo. Use main para o conteúdo principal, nav
+                para navegação e uma hierarquia de títulos que reflita a organização. Links e
+                mídia Use a com href para navegar e button para ações. Imagens informativas
+                precisam de texto alternativo que cumpra o mesmo propósito. Use alt vazio em
+                imagens puramente decorativas. Formulários Associe label e input via for e id.
+                O atributo name identifica o campo no envio. type='email' e required ajudam na
+                validação do navegador. Um servidor deve validar os dados novamente ao
+                recebê-los. Listas e tabelas Use ul para itens sem ordem e ol para sequências.
+                Use tabelas para dados tabulares, com caption para contextualizar e th com
+                scope para cabeçalhos.
+              "
+            >
+              <span class="tile-icon" aria-hidden="true">&lt;&gt;</span>
+              <strong>HTML</strong>
+              <small>Estrutura semântica, formulários e acessibilidade.</small>
+              <span class="done" hidden>✓ Revisada</span>
+            </a>
+            <a
+              class="tile"
+              href="css.html"
+              data-id="css"
+              data-search="
+                CSS Cascata, dimensionamento, layout e responsividade. Seletores e cascata
+                Classes selecionam elementos reutilizáveis. Entre regras normais do mesmo
+                autor e da mesma camada, a maior especificidade vence. Se a especificidade for
+                igual, vence a declaração posterior. Modelo de caixa Cada elemento tem
+                conteúdo, padding, borda e margem. Com box-sizing: border-box, o width inclui
+                padding e borda. Margens ficam fora da caixa. Flexbox e Grid Flexbox organiza
+                itens em um eixo principal e outro transversal. Grid define linhas e colunas
+                ao mesmo tempo. Use gap para espaçar itens nos dois layouts. Responsividade e
+                estados Use unidades flexíveis, limites de largura e media queries quando o
+                conteúdo precisar de uma mudança de layout. :focus-visible marca o foco para
+                navegação por teclado. Garanta contraste e legibilidade.
+              "
+            >
+              <span class="tile-icon" aria-hidden="true">{ }</span>
+              <strong>CSS</strong>
+              <small>Cascata, dimensionamento, layout e responsividade.</small>
+              <span class="done" hidden>✓ Revisada</span>
+            </a>
+            <a
+              class="tile"
+              href="javascript.html"
+              data-id="javascript"
+              data-search="
+                JavaScript Lógica, DOM, eventos e operações assíncronas. Tipos e operadores
+                Use const para vínculos sem reatribuição e let quando houver reatribuição.
+                const ainda permite alterar propriedades de um objeto. === compara sem coerção
+                de tipos. Number converte texto numérico e Number.isFinite valida o resultado.
+                Funções e coleções Arrays guardam listas ordenadas e objetos guardam
+                propriedades. map transforma elementos, filter seleciona elementos e reduce
+                acumula um resultado. Uma função pode receber ou retornar outras funções. DOM
+                e eventos querySelector encontra o primeiro elemento correspondente.
+                addEventListener associa uma função a um evento. textContent atualiza texto
+                sem interpretá-lo como HTML. Em formulários, preventDefault cancela o envio
+                padrão quando você vai tratar o evento. Assincronismo e JSON Uma Promise
+                representa o resultado futuro de uma operação. await espera a resolução dentro
+                de uma função async. Com fetch, verifique response.ok antes de ler JSON e
+                trate falhas de rede com try/catch.
+              "
+            >
+              <span class="tile-icon" aria-hidden="true">JS</span>
+              <strong>JavaScript</strong>
+              <small>Lógica, DOM, eventos e operações assíncronas.</small>
+              <span class="done" hidden>✓ Revisada</span>
+            </a>
+            <a
+              class="tile"
+              href="canvas.html"
+              data-id="canvas"
+              data-search="
+                Negócios em TI — Canvas Os nove blocos do Business Model Canvas e validação de
+                hipóteses. Clientes e valor Segmentos de clientes definem para quem você cria
+                valor. Proposta de valor descreve o problema resolvido e o benefício. Em
+                software, diferencie quem usa, quem decide e quem paga. Canais e
+                relacionamento Canais mostram como as pessoas descobrem, compram e usam a
+                solução. Relacionamento indica como são atendidas e retidas, por exemplo, por
+                autosserviço ou suporte humano. Receitas e custos Fontes de receita descrevem
+                quem paga, quanto e de que forma. Estrutura de custos reúne gastos fixos e
+                variáveis. Compare receita, margem e volume necessário para sustentar o
+                negócio. Recursos, atividades e parceiros Recursos são os ativos necessários,
+                como equipe e infraestrutura. Atividades são ações essenciais, como
+                desenvolver e operar. Parcerias são organizações externas que ajudam a
+                entregar o valor. Validação e MVP Trate cada bloco como hipótese. Converse com
+                o segmento escolhido, teste uma versão mínima e defina antes o que será
+                medido. Atualize o Canvas com evidências do teste.
+              "
+            >
+              <span class="tile-icon" aria-hidden="true">CN</span>
+              <strong>Negócios em TI — Canvas</strong>
+              <small>Os nove blocos do Business Model Canvas e validação de hipóteses.</small>
+              <span class="done" hidden>✓ Revisada</span>
+            </a>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div class="shell">
+        Guia de estudo independente · Engenharia de Software<br><a href="https://www.eniac.edu.br/cursos/engenharia-software">Matriz curricular pública da ENIAC</a>
+      </div>
+    </footer>
+  </body>
+</html>

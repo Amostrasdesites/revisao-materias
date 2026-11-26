@@ -1,9 +1,9 @@
-
 const getDone = () => {
   try { return JSON.parse(localStorage.getItem('revisao-software') || '[]'); }
   catch { return []; }
 };
 const saveDone = items => localStorage.setItem('revisao-software', JSON.stringify(items));
+
 const progress = document.querySelector('progress');
 if (progress) {
   const done = getDone();
@@ -14,8 +14,14 @@ if (progress) {
   });
   const filters = [...document.querySelectorAll('.filter')];
   const search = document.querySelector('#search');
-  const normalize = str => str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const normalize = text => text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
   let selected = 'all';
+
   function update() {
     const query = normalize(search.value.trim());
     let matches = 0;
@@ -30,6 +36,7 @@ if (progress) {
     });
     document.querySelector('#empty').hidden = matches > 0;
   }
+
   search.addEventListener('input', update);
   filters.forEach(filter => filter.addEventListener('click', () => {
     selected = filter.dataset.filter;
@@ -37,6 +44,7 @@ if (progress) {
     update();
   }));
 }
+
 const review = document.querySelector('#review');
 if (review) {
   const id = review.dataset.id;
@@ -56,6 +64,7 @@ if (review) {
     }
   });
 }
+
 const copy = document.querySelector('.copy');
 if (copy) copy.addEventListener('click', async () => {
   const code = document.querySelector('.snippet pre');

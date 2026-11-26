@@ -1,12 +1,78 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Guia de revisão do primeiro ano de Engenharia de Software"><title>CSS | Revisão de Software</title><link rel="stylesheet" href="estilo.css"><script src="revisao.js" defer></script></head>
-<body><header class="top"><div class="shell"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span> Revisão de Software</a><nav aria-label="Principal"><a href="index.html#materias">Matérias</a><a href="https://www.eniac.edu.br/cursos/engenharia-software">Grade ENIAC</a></nav></div></header>
-<main class="shell layout"><aside class="side"><nav aria-label="Matérias"><p class="eyebrow">1º período</p><a href="comunicacao.html">Comunicação</a><a href="carreira.html">Desenvolvimento Profissional</a><a href="matematica.html">Matemática</a><p class="eyebrow">2º período</p><a href="sql.html">Banco de Dados com SQL</a><a href="c.html">Linguagem C</a><a href="python.html">Linguagem Python</a><a href="html.html">HTML</a><a href="css.html" aria-current="page">CSS</a><a href="javascript.html">JavaScript</a><a href="canvas.html">Negócios em TI — Canvas</a></nav></aside><article class="lesson">
-<div class="lesson-head"><p class="eyebrow">2º período / Tecnologia Web</p><h1>CSS</h1><p>Cascata, dimensionamento, layout e responsividade.</p></div>
-<nav class="lesson-index" aria-label="Nesta matéria"><a href="#conceitos">Conceitos</a><a href="#exemplo">Exemplo comentado</a><a href="#exercicios">Exercícios</a></nav>
-<section id="conceitos"><h2>Conceitos essenciais</h2><div class="topic"><h3>Seletores e cascata</h3><p>Classes selecionam elementos reutilizáveis. Entre regras normais do mesmo autor e da mesma camada, a maior especificidade vence. Se a especificidade for igual, vence a declaração posterior.</p></div><div class="topic"><h3>Modelo de caixa</h3><p>Cada elemento tem conteúdo, padding, borda e margem. Com box-sizing: border-box, o width inclui padding e borda. Margens ficam fora da caixa.</p></div><div class="topic"><h3>Flexbox e Grid</h3><p>Flexbox organiza itens em um eixo principal e outro transversal. Grid define linhas e colunas ao mesmo tempo. Use gap para espaçar itens nos dois layouts.</p></div><div class="topic"><h3>Responsividade e estados</h3><p>Use unidades flexíveis, limites de largura e media queries quando o conteúdo precisar de uma mudança de layout. :focus-visible marca o foco para navegação por teclado. Garanta contraste e legibilidade.</p></div></section>
-<section id="exemplo"><h2>Cards responsivos</h2><div class="snippet"><div class="code-head"><span>CSS</span><button class="copy" type="button">Copiar exemplo</button></div><pre tabindex="0" aria-label="Cards responsivos"><code>* {
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guia de revisão do primeiro ano de Engenharia de Software">
+    <title>CSS | Revisão de Software</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="revisao.js" defer></script>
+  </head>
+  <body>
+    <header class="top">
+      <div class="shell">
+        <a class="brand" href="index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span> Revisão de Software</a>
+        <nav aria-label="Principal">
+          <a href="index.html#materias">Matérias</a>
+          <a href="https://www.eniac.edu.br/cursos/engenharia-software">Grade ENIAC</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell layout">
+      <aside class="side">
+        <nav aria-label="Matérias">
+          <p class="eyebrow">1º período</p>
+          <a href="comunicacao.html">Comunicação</a>
+          <a href="carreira.html">Desenvolvimento Profissional</a>
+          <a href="matematica.html">Matemática</a>
+          <p class="eyebrow">2º período</p>
+          <a href="sql.html">Banco de Dados com SQL</a>
+          <a href="c.html">Linguagem C</a>
+          <a href="python.html">Linguagem Python</a>
+          <a href="html.html">HTML</a>
+          <a href="css.html" aria-current="page">CSS</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="canvas.html">Negócios em TI — Canvas</a>
+        </nav>
+      </aside>
+      <article class="lesson">
+        <div class="lesson-head">
+          <p class="eyebrow">2º período / Tecnologia Web</p>
+          <h1>CSS</h1>
+          <p>Cascata, dimensionamento, layout e responsividade.</p>
+        </div>
+        <nav class="lesson-index" aria-label="Nesta matéria">
+          <a href="#conceitos">Conceitos</a>
+          <a href="#exemplo">Exemplo comentado</a>
+          <a href="#exercicios">Exercícios</a>
+        </nav>
+        <section id="conceitos">
+          <h2>Conceitos essenciais</h2>
+          <div class="topic">
+            <h3>Seletores e cascata</h3>
+            <p>Classes selecionam elementos reutilizáveis. Entre regras normais do mesmo autor e da mesma camada, a maior especificidade vence. Se a especificidade for igual, vence a declaração posterior.</p>
+          </div>
+          <div class="topic">
+            <h3>Modelo de caixa</h3>
+            <p>Cada elemento tem conteúdo, padding, borda e margem. Com box-sizing: border-box, o width inclui padding e borda. Margens ficam fora da caixa.</p>
+          </div>
+          <div class="topic">
+            <h3>Flexbox e Grid</h3>
+            <p>Flexbox organiza itens em um eixo principal e outro transversal. Grid define linhas e colunas ao mesmo tempo. Use gap para espaçar itens nos dois layouts.</p>
+          </div>
+          <div class="topic">
+            <h3>Responsividade e estados</h3>
+            <p>Use unidades flexíveis, limites de largura e media queries quando o conteúdo precisar de uma mudança de layout. :focus-visible marca o foco para navegação por teclado. Garanta contraste e legibilidade.</p>
+          </div>
+        </section>
+        <section id="exemplo">
+          <h2>Cards responsivos</h2>
+          <div class="snippet">
+            <div class="code-head">
+              <span>CSS</span>
+              <button class="copy" type="button">Copiar exemplo</button>
+            </div>
+            <pre tabindex="0" aria-label="Cards responsivos"><code>* {
   box-sizing: border-box;
 }
 
@@ -26,8 +92,34 @@
 a:focus-visible {
   outline: 3px solid <span class="keyword">#005cc5;</span>
   outline-offset: 3px;
-}</code></pre></div><p id="copy-status" class="status" aria-live="polite"></p><p>Aplique .grade ao contêiner e .cartao aos filhos. As colunas se reorganizam quando falta espaço e o limite min(100%, 16rem) evita impor 16rem em telas menores.</p></section>
-<section id="exercicios" class="practice"><h2>Exercícios de revisão</h2><p>Tente resolver antes de abrir a resposta.</p><details><summary>Com width de 200px, padding de 16px e borda de 2px, qual a largura do conteúdo usando border-box?</summary><p><strong>Resposta.</strong> 200 − 32 − 4 = 164px.</p></details><details><summary>Se duas regras .cartao definem a mesma propriedade no mesmo contexto, qual vence?</summary><p><strong>Resposta.</strong> A última, pois ambas têm a mesma especificidade.</p></details></section>
-<div class="lesson-bottom"><button id="review" type="button" class="button primary" data-id="css" aria-pressed="false">Marcar como revisada</button><a class="button" href="javascript.html">Próxima · JavaScript</a></div><p id="review-status" class="status" aria-live="polite"></p>
-</article></main>
-<footer><div class="shell">Guia de estudo independente · Engenharia de Software<br><a href="https://www.eniac.edu.br/cursos/engenharia-software">Matriz curricular pública da ENIAC</a></div></footer></body></html>
+}</code></pre>
+          </div>
+          <p id="copy-status" class="status" aria-live="polite"></p>
+          <p>Aplique .grade ao contêiner e .cartao aos filhos. As colunas se reorganizam quando falta espaço e o limite min(100%, 16rem) evita impor 16rem em telas menores.</p>
+        </section>
+        <section id="exercicios" class="practice">
+          <h2>Exercícios de revisão</h2>
+          <p>Tente resolver antes de abrir a resposta.</p>
+          <details>
+            <summary>Com width de 200px, padding de 16px e borda de 2px, qual a largura do conteúdo usando border-box?</summary>
+            <p><strong>Resposta.</strong> 200 − 32 − 4 = 164px.</p>
+          </details>
+          <details>
+            <summary>Se duas regras .cartao definem a mesma propriedade no mesmo contexto, qual vence?</summary>
+            <p><strong>Resposta.</strong> A última, pois ambas têm a mesma especificidade.</p>
+          </details>
+        </section>
+        <div class="lesson-bottom">
+          <button id="review" type="button" class="button primary" data-id="css" aria-pressed="false">Marcar como revisada</button>
+          <a class="button" href="javascript.html">Próxima · JavaScript</a>
+        </div>
+        <p id="review-status" class="status" aria-live="polite"></p>
+      </article>
+    </main>
+    <footer>
+      <div class="shell">
+        Guia de estudo independente · Engenharia de Software<br><a href="https://www.eniac.edu.br/cursos/engenharia-software">Matriz curricular pública da ENIAC</a>
+      </div>
+    </footer>
+  </body>
+</html>

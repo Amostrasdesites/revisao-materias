@@ -1,17 +1,113 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Guia de revisão do primeiro ano de Engenharia de Software"><title>Desenvolvimento Profissional | Revisão de Software</title><link rel="stylesheet" href="estilo.css"><script src="revisao.js" defer></script></head>
-<body><header class="top"><div class="shell"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span> Revisão de Software</a><nav aria-label="Principal"><a href="index.html#materias">Matérias</a><a href="https://www.eniac.edu.br/cursos/engenharia-software">Grade ENIAC</a></nav></div></header>
-<main class="shell layout"><aside class="side"><nav aria-label="Matérias"><p class="eyebrow">1º período</p><a href="comunicacao.html">Comunicação</a><a href="carreira.html" aria-current="page">Desenvolvimento Profissional</a><a href="matematica.html">Matemática</a><p class="eyebrow">2º período</p><a href="sql.html">Banco de Dados com SQL</a><a href="c.html">Linguagem C</a><a href="python.html">Linguagem Python</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="javascript.html">JavaScript</a><a href="canvas.html">Negócios em TI — Canvas</a></nav></aside><article class="lesson">
-<div class="lesson-head"><p class="eyebrow">1º período</p><h1>Desenvolvimento Profissional</h1><p>Portfólio, colaboração e qualidade no trabalho de software.</p></div>
-<nav class="lesson-index" aria-label="Nesta matéria"><a href="#conceitos">Conceitos</a><a href="#exemplo">Exemplo comentado</a><a href="#exercicios">Exercícios</a></nav>
-<section id="conceitos"><h2>Conceitos essenciais</h2><div class="topic"><h3>Papéis e ciclo do software</h3><p>Produto prioriza problemas, design investiga a experiência, engenharia implementa e opera, e qualidade ajuda a prevenir e detectar falhas. Requisitos, desenvolvimento, testes, entrega e manutenção se repetem conforme o produto evolui.</p></div><div class="topic"><h3>Git e colaboração</h3><p>Um commit registra um conjunto de mudanças. Uma branch isola uma linha de trabalho. Um pull request reúne contexto, alterações e evidências para revisão. Prefira commits com um propósito claro.</p></div><div class="topic"><h3>Qualidade e testes</h3><p>Teste unitário verifica uma unidade isolada. Teste de integração verifica componentes trabalhando juntos. Teste ponta a ponta percorre o fluxo do usuário. Cubra entradas válidas, inválidas e valores de fronteira.</p></div><div class="topic"><h3>Portfólio e entrevistas</h3><p>Mostre problema, decisões, instruções de execução e testes no README. Para entrevistas, use situação, tarefa, ação e resultado. Explique sua contribuição e apresente evidências mensuráveis quando disponíveis.</p></div><div class="topic"><h3>Ética e rotina</h3><p>Use dados fictícios em projetos públicos e mantenha credenciais fora do repositório. Divida tarefas em entregas pequenas, comunique bloqueios cedo e registre decisões que afetem a equipe.</p></div></section>
-<section id="exemplo"><h2>Git em uma entrega</h2><div class="snippet"><div class="code-head"><span>Terminal</span><button class="copy" type="button">Copiar exemplo</button></div><pre tabindex="0" aria-label="Git em uma entrega"><code>git switch -c melhoria-validacao
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guia de revisão do primeiro ano de Engenharia de Software">
+    <title>Desenvolvimento Profissional | Revisão de Software</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="revisao.js" defer></script>
+  </head>
+  <body>
+    <header class="top">
+      <div class="shell">
+        <a class="brand" href="index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span> Revisão de Software</a>
+        <nav aria-label="Principal">
+          <a href="index.html#materias">Matérias</a>
+          <a href="https://www.eniac.edu.br/cursos/engenharia-software">Grade ENIAC</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell layout">
+      <aside class="side">
+        <nav aria-label="Matérias">
+          <p class="eyebrow">1º período</p>
+          <a href="comunicacao.html">Comunicação</a>
+          <a href="carreira.html" aria-current="page">Desenvolvimento Profissional</a>
+          <a href="matematica.html">Matemática</a>
+          <p class="eyebrow">2º período</p>
+          <a href="sql.html">Banco de Dados com SQL</a>
+          <a href="c.html">Linguagem C</a>
+          <a href="python.html">Linguagem Python</a>
+          <a href="html.html">HTML</a>
+          <a href="css.html">CSS</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="canvas.html">Negócios em TI — Canvas</a>
+        </nav>
+      </aside>
+      <article class="lesson">
+        <div class="lesson-head">
+          <p class="eyebrow">1º período</p>
+          <h1>Desenvolvimento Profissional</h1>
+          <p>Portfólio, colaboração e qualidade no trabalho de software.</p>
+        </div>
+        <nav class="lesson-index" aria-label="Nesta matéria">
+          <a href="#conceitos">Conceitos</a>
+          <a href="#exemplo">Exemplo comentado</a>
+          <a href="#exercicios">Exercícios</a>
+        </nav>
+        <section id="conceitos">
+          <h2>Conceitos essenciais</h2>
+          <div class="topic">
+            <h3>Papéis e ciclo do software</h3>
+            <p>Produto prioriza problemas, design investiga a experiência, engenharia implementa e opera, e qualidade ajuda a prevenir e detectar falhas. Requisitos, desenvolvimento, testes, entrega e manutenção se repetem conforme o produto evolui.</p>
+          </div>
+          <div class="topic">
+            <h3>Git e colaboração</h3>
+            <p>Um commit registra um conjunto de mudanças. Uma branch isola uma linha de trabalho. Um pull request reúne contexto, alterações e evidências para revisão. Prefira commits com um propósito claro.</p>
+          </div>
+          <div class="topic">
+            <h3>Qualidade e testes</h3>
+            <p>Teste unitário verifica uma unidade isolada. Teste de integração verifica componentes trabalhando juntos. Teste ponta a ponta percorre o fluxo do usuário. Cubra entradas válidas, inválidas e valores de fronteira.</p>
+          </div>
+          <div class="topic">
+            <h3>Portfólio e entrevistas</h3>
+            <p>Mostre problema, decisões, instruções de execução e testes no README. Para entrevistas, use situação, tarefa, ação e resultado. Explique sua contribuição e apresente evidências mensuráveis quando disponíveis.</p>
+          </div>
+          <div class="topic">
+            <h3>Ética e rotina</h3>
+            <p>Use dados fictícios em projetos públicos e mantenha credenciais fora do repositório. Divida tarefas em entregas pequenas, comunique bloqueios cedo e registre decisões que afetem a equipe.</p>
+          </div>
+        </section>
+        <section id="exemplo">
+          <h2>Git em uma entrega</h2>
+          <div class="snippet">
+            <div class="code-head">
+              <span>Terminal</span>
+              <button class="copy" type="button">Copiar exemplo</button>
+            </div>
+            <pre tabindex="0" aria-label="Git em uma entrega"><code>git switch -c melhoria-validacao
 <span class="comment"># Após editar e testar a alteração:</span>
 git add cadastro.js
 git diff <span class="comment">--staged</span>
-git commit -m <span class="string">&quot;Valida e-mail no cadastro&quot;</span></code></pre></div><p id="copy-status" class="status" aria-live="polite"></p><p>A branch isola a alteração. O diff mostra o conteúdo preparado para o commit. O comando pressupõe um repositório Git e o arquivo editado.</p></section>
-<section id="exercicios" class="practice"><h2>Exercícios de revisão</h2><p>Tente resolver antes de abrir a resposta.</p><details><summary>Que teste confirma a comunicação entre a API de cadastro e o banco?</summary><p><strong>Resposta.</strong> Um teste de integração, usando um banco de teste e verificando o registro persistido.</p></details><details><summary>Como demonstrar uma entrega no portfólio?</summary><p><strong>Resposta.</strong> Documente o problema, suas decisões, os passos para executar, os testes e o resultado observado.</p></details></section>
-<div class="lesson-bottom"><button id="review" type="button" class="button primary" data-id="carreira" aria-pressed="false">Marcar como revisada</button><a class="button" href="matematica.html">Próxima · Matemática</a></div><p id="review-status" class="status" aria-live="polite"></p>
-</article></main>
-<footer><div class="shell">Guia de estudo independente · Engenharia de Software<br><a href="https://www.eniac.edu.br/cursos/engenharia-software">Matriz curricular pública da ENIAC</a></div></footer></body></html>
+git commit -m <span class="string">&quot;Valida e-mail no cadastro&quot;</span></code></pre>
+          </div>
+          <p id="copy-status" class="status" aria-live="polite"></p>
+          <p>A branch isola a alteração. O diff mostra o conteúdo preparado para o commit. O comando pressupõe um repositório Git e o arquivo editado.</p>
+        </section>
+        <section id="exercicios" class="practice">
+          <h2>Exercícios de revisão</h2>
+          <p>Tente resolver antes de abrir a resposta.</p>
+          <details>
+            <summary>Que teste confirma a comunicação entre a API de cadastro e o banco?</summary>
+            <p><strong>Resposta.</strong> Um teste de integração, usando um banco de teste e verificando o registro persistido.</p>
+          </details>
+          <details>
+            <summary>Como demonstrar uma entrega no portfólio?</summary>
+            <p><strong>Resposta.</strong> Documente o problema, suas decisões, os passos para executar, os testes e o resultado observado.</p>
+          </details>
+        </section>
+        <div class="lesson-bottom">
+          <button id="review" type="button" class="button primary" data-id="carreira" aria-pressed="false">Marcar como revisada</button>
+          <a class="button" href="matematica.html">Próxima · Matemática</a>
+        </div>
+        <p id="review-status" class="status" aria-live="polite"></p>
+      </article>
+    </main>
+    <footer>
+      <div class="shell">
+        Guia de estudo independente · Engenharia de Software<br><a href="https://www.eniac.edu.br/cursos/engenharia-software">Matriz curricular pública da ENIAC</a>
+      </div>
+    </footer>
+  </body>
+</html>
